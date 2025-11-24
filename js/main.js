@@ -582,53 +582,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Gestion du formulaire de contact
+// Gestion du formulaire de contact (Netlify Forms)
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Laisser Netlify gérer la soumission
+            // Afficher un message de chargement
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
             
-            // Récupération des données du formulaire
-            const formData = new FormData(this);
-            const data = {};
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi en cours...';
             
-            // Construction du sujet et du corps de l'email
-            const subject = `Demande de RDV - ${data.matiere}`;
-            
-            const body = `
-Nouvelle demande de rendez-vous
-
-INFORMATIONS CONTACT :
-- Nom : ${data.nom}
-- Email : ${data.email}
-- Téléphone : ${data.telephone}
-
-MATIÈRE SOUHAITÉE :
-${data.matiere}
-
-MESSAGE / SITUATION :
-${data.message || 'Aucun message'}
-
----
-Envoyé depuis le site web Greg M. Mittel
-            `.trim();
-            
-            // Création du lien mailto
-            const mailtoLink = `mailto:gregjazzy@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Ouverture du client email
-            window.location.href = mailtoLink;
-            
-            // Message de confirmation
-            alert('Votre client email va s\'ouvrir avec le message pré-rempli. Envoyez-le pour finaliser votre demande de rendez-vous.');
-            
-            // Optionnel : réinitialiser le formulaire
-            // this.reset();
+            // Note: Netlify redirigera automatiquement vers une page de succès
+            // ou vous pouvez ajouter un attribut action="/thank-you" au formulaire
         });
     }
 });

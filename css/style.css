@@ -3553,6 +3553,11 @@ section[id] {
 }
 
 /* Formulaire de contact */
+/* Honeypot anti-spam */
+.hidden {
+    display: none;
+}
+
 .contact-form {
     max-width: 800px;
     margin: 2rem auto 0;
