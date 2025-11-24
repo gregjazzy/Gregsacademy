@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/language-detector.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="theme-macrocosmos">
@@ -105,12 +106,12 @@
                         </div>
                         
                         <div style="
-                            background: rgba(255, 138, 250, 0.1);
+                            background: rgba(255, 105, 180, 0.1);
                             border-radius: 15px;
                             padding: 1.5rem;
-                            border-left: 4px solid #FF8AFA;
+                            border-left: 4px solid #FF69B4;
                         ">
-                            <h3 style="color: #FF8AFA; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <h3 style="color: #FF69B4; margin-bottom: 1rem; font-size: 1.2rem;">
                                 📊 Suivi personnalisé
                             </h3>
                             <p style="color: #e0e0e0; line-height: 1.6;">
@@ -119,12 +120,12 @@
                         </div>
                         
                         <div style="
-                            background: rgba(198, 138, 255, 0.1);
+                            background: rgba(138, 138, 255, 0.1);
                             border-radius: 15px;
                             padding: 1.5rem;
-                            border-left: 4px solid #C68AFF;
+                            border-left: 4px solid #8A8AFF;
                         ">
-                            <h3 style="color: #C68AFF; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <h3 style="color: #8A8AFF; margin-bottom: 1rem; font-size: 1.2rem;">
                                 🏆 Préparation complète
                             </h3>
                             <p style="color: #e0e0e0; line-height: 1.6;">
@@ -133,12 +134,12 @@
                         </div>
                         
                         <div style="
-                            background: rgba(255, 215, 0, 0.1);
+                            background: rgba(255, 105, 180, 0.1);
                             border-radius: 15px;
                             padding: 1.5rem;
-                            border-left: 4px solid #FFD700;
+                            border-left: 4px solid #FF69B4;
                         ">
-                            <h3 style="color: #FFD700; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <h3 style="color: #FF69B4; margin-bottom: 1rem; font-size: 1.2rem;">
                                 🔄 Accès illimité
                             </h3>
                             <p style="color: #e0e0e0; line-height: 1.6;">
@@ -147,19 +148,19 @@
                         </div>
                         
                         <div style="
-                            background: rgba(50, 205, 50, 0.1);
+                            background: rgba(138, 138, 255, 0.1);
                             border-radius: 15px;
                             padding: 1.5rem;
-                            border-left: 4px solid #32CD32;
+                            border-left: 4px solid #8A8AFF;
                         ">
-                            <h3 style="color: #32CD32; margin-bottom: 1rem; font-size: 1.2rem;">
+                            <h3 style="color: #8A8AFF; margin-bottom: 1rem; font-size: 1.2rem;">
                                 📈 Ça marche !
                             </h3>
                             <p style="color: #e0e0e0; line-height: 1.6; margin-bottom: 1rem;">
                                 Des progrès spectaculaires et une confiance retrouvée dès les premières semaines !
                             </p>
                             <a href="index.html#resultats-maths" style="
-                                background: linear-gradient(135deg, #32CD32, #228B22);
+                                background: linear-gradient(135deg, #8A8AFF, #FF69B4);
                                 color: white;
                                 padding: 0.8rem 1.5rem;
                                 border-radius: 10px;
@@ -170,7 +171,7 @@
                                 transition: all 0.3s ease;
                                 text-transform: uppercase;
                                 letter-spacing: 0.5px;
-                            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(50, 205, 50, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(138, 138, 255, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                 👀 Voir les résultats de mes élèves
                             </a>
                         </div>
@@ -218,67 +219,168 @@
 
                 <div class="details-content">
 
-                    <div class="service-details-extended">
-                        <h2>Format du stage</h2>
-                        <div class="extended-content">
-                            <div class="benefit-section">
-                                <h3>📅 Durée</h3>
-                                <p><strong>2h30 par jour soit 12h30 au total</strong> sur 5 jours consécutifs</p>
+                    <div class="service-details-extended" style="
+                        background: linear-gradient(135deg, rgba(13, 13, 15, 0.95), rgba(26, 26, 29, 0.9));
+                        border-radius: 20px;
+                        padding: 3rem;
+                        margin: 3rem 0;
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                        border: 1px solid rgba(255, 105, 180, 0.3);
+                        backdrop-filter: blur(20px);
+                    ">
+                        <h2 style="
+                            color: #FF69B4;
+                            font-size: 2rem;
+                            margin-bottom: 2.5rem;
+                            text-align: center;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">📚 Format du Stage</h2>
+                        <div class="extended-content" style="
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                            gap: 2rem;
+                        ">
+                            <div class="benefit-section" style="
+                                background: linear-gradient(145deg, rgba(255, 105, 180, 0.1), rgba(255, 105, 180, 0.05));
+                                border-radius: 15px;
+                                padding: 2rem;
+                                border: 2px solid rgba(255, 105, 180, 0.3);
+                                transition: all 0.3s ease;
+                                text-align: center;
+                            " onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(255, 105, 180, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 105, 180, 0.3)'">
+                                <h3 style="color: #FF69B4; font-size: 1.5rem; margin-bottom: 1rem;">📅 Durée</h3>
+                                <p style="color: #e0e0e0; font-size: 1.1rem; line-height: 1.6;"><strong>2h30 par jour soit 12h30 au total</strong> sur 5 jours consécutifs</p>
                             </div>
-                            <div class="benefit-section">
-                                <h3>📊 Bilan personnalisé</h3>
-                                <p>Évaluation détaillée des acquis et des points d'amélioration pour chaque élève</p>
+                            <div class="benefit-section" style="
+                                background: linear-gradient(145deg, rgba(138, 138, 255, 0.1), rgba(138, 138, 255, 0.05));
+                                border-radius: 15px;
+                                padding: 2rem;
+                                border: 2px solid rgba(138, 138, 255, 0.3);
+                                transition: all 0.3s ease;
+                                text-align: center;
+                            " onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(138, 138, 255, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(138, 138, 255, 0.3)'">
+                                <h3 style="color: #8A8AFF; font-size: 1.5rem; margin-bottom: 1rem;">📊 Bilan personnalisé</h3>
+                                <p style="color: #e0e0e0; font-size: 1.1rem; line-height: 1.6;">Évaluation détaillée des acquis et des points d'amélioration pour chaque élève</p>
                             </div>
-                            <div class="benefit-section">
-                                <h3>🗺️ Feuille de route</h3>
-                                <p>Plan de travail personnalisé pour optimiser la progression jusqu'à la Toussaint</p>
+                            <div class="benefit-section" style="
+                                background: linear-gradient(145deg, rgba(255, 138, 250, 0.1), rgba(255, 138, 250, 0.05));
+                                border-radius: 15px;
+                                padding: 2rem;
+                                border: 2px solid rgba(255, 138, 250, 0.3);
+                                transition: all 0.3s ease;
+                                text-align: center;
+                            " onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(255, 138, 250, 0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(255, 138, 250, 0.3)'">
+                                <h3 style="color: #FF8AFA; font-size: 1.5rem; margin-bottom: 1rem;">🗺️ Feuille de route</h3>
+                                <p style="color: #e0e0e0; font-size: 1.1rem; line-height: 1.6;">Plan de travail personnalisé pour optimiser la progression jusqu'à la Toussaint</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="stage-calendar">
-                        <h2>Stage de Prérentrée 2025</h2>
-                        <div class="calendar-grid">
-                            <div class="calendar-item">
-                                <h4>Stage de Prérentrée - Terminale</h4>
-                                <p>Du 25 au 29 août 2025</p>
+                    <div class="stage-calendar" style="
+                        background: linear-gradient(135deg, rgba(13, 13, 15, 0.95), rgba(26, 26, 29, 0.9));
+                        border-radius: 20px;
+                        padding: 3rem;
+                        margin: 3rem 0;
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                        border: 1px solid rgba(255, 105, 180, 0.3);
+                        backdrop-filter: blur(20px);
+                    ">
+                        <h2 style="
+                            color: #8A8AFF;
+                            font-size: 2rem;
+                            margin-bottom: 2.5rem;
+                            text-align: center;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        ">📅 Stage de Prérentrée 2025</h2>
+                        <div class="calendar-grid" style="
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                            gap: 2rem;
+                        ">
+                            <div class="calendar-item" style="
+                                background: linear-gradient(145deg, rgba(255, 105, 180, 0.15), rgba(138, 138, 255, 0.15));
+                                border-radius: 16px;
+                                padding: 2.5rem;
+                                border: 2px solid rgba(255, 105, 180, 0.3);
+                                transition: all 0.3s ease;
+                                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                            " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(255, 105, 180, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.2)'">
+                                <h4 style="
+                                    color: #FF69B4;
+                                    font-size: 1.5rem;
+                                    margin-bottom: 1rem;
+                                    font-weight: 700;
+                                    text-align: center;
+                                ">Stage de Prérentrée - Terminale</h4>
+                                <p style="
+                                    color: #8A8AFF;
+                                    font-size: 1.2rem;
+                                    margin-bottom: 1.5rem;
+                                    font-weight: 600;
+                                    text-align: center;
+                                ">Du 25 au 29 août 2025</p>
                                 <div style="margin: 1.5rem 0; text-align: center;">
-                                    <p style="margin-bottom: 1rem; color: #ffffff; font-weight: 500;">Anticipez le programme de l'année à venir</p>
+                                    <p style="margin-bottom: 1.5rem; color: #ffffff; font-weight: 500; font-size: 1.1rem;">Anticipez le programme de l'année à venir</p>
                                     <a href="index.html#contact" style="
                                         background: linear-gradient(135deg, #FF69B4, #8A8AFF);
                                         color: white;
-                                        padding: 0.8rem 1.5rem;
-                                        border-radius: 10px;
+                                        padding: 1rem 2rem;
+                                        border-radius: 12px;
                                         text-decoration: none;
-                                        font-weight: 600;
-                                        font-size: 1rem;
+                                        font-weight: 700;
+                                        font-size: 1.1rem;
                                         display: inline-block;
                                         transition: all 0.3s ease;
                                         text-transform: uppercase;
                                         letter-spacing: 0.5px;
-                                    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(255, 105, 180, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                        box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+                                    " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(255, 105, 180, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(255, 105, 180, 0.3)'">
                                         📞 Réserver ma place
                                     </a>
                                 </div>
                             </div>
-                            <div class="calendar-item">
-                                <h4>Stage de Prérentrée - Première</h4>
-                                <p>Du 25 au 29 août 2025</p>
+                            <div class="calendar-item" style="
+                                background: linear-gradient(145deg, rgba(138, 138, 255, 0.15), rgba(255, 138, 250, 0.15));
+                                border-radius: 16px;
+                                padding: 2.5rem;
+                                border: 2px solid rgba(138, 138, 255, 0.3);
+                                transition: all 0.3s ease;
+                                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                            " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(138, 138, 255, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.2)'">
+                                <h4 style="
+                                    color: #8A8AFF;
+                                    font-size: 1.5rem;
+                                    margin-bottom: 1rem;
+                                    font-weight: 700;
+                                    text-align: center;
+                                ">Stage de Prérentrée - Première</h4>
+                                <p style="
+                                    color: #FF8AFA;
+                                    font-size: 1.2rem;
+                                    margin-bottom: 1.5rem;
+                                    font-weight: 600;
+                                    text-align: center;
+                                ">Du 25 au 29 août 2025</p>
                                 <div style="margin: 1.5rem 0; text-align: center;">
-                                    <p style="margin-bottom: 1rem; color: #ffffff; font-weight: 500;">Anticipez le programme de l'année à venir</p>
+                                    <p style="margin-bottom: 1.5rem; color: #ffffff; font-weight: 500; font-size: 1.1rem;">Anticipez le programme de l'année à venir</p>
                                     <a href="index.html#contact" style="
-                                        background: linear-gradient(135deg, #FF69B4, #8A8AFF);
+                                        background: linear-gradient(135deg, #8A8AFF, #FF8AFA);
                                         color: white;
-                                        padding: 0.8rem 1.5rem;
-                                        border-radius: 10px;
+                                        padding: 1rem 2rem;
+                                        border-radius: 12px;
                                         text-decoration: none;
-                                        font-weight: 600;
-                                        font-size: 1rem;
+                                        font-weight: 700;
+                                        font-size: 1.1rem;
                                         display: inline-block;
                                         transition: all 0.3s ease;
                                         text-transform: uppercase;
                                         letter-spacing: 0.5px;
-                                    " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(255, 105, 180, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                        box-shadow: 0 4px 15px rgba(138, 138, 255, 0.3);
+                                    " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(138, 138, 255, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(138, 138, 255, 0.3)'">
                                         📞 Réserver ma place
                                     </a>
                                 </div>

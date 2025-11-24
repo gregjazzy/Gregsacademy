@@ -24,102 +24,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/language-detector.js"></script>
     <style>
         .testimonials-page {
             background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(13,13,15,0.9));
             min-height: 100vh;
-            padding: 2rem 0;
+            padding: 6rem 0 3rem 0;
         }
         
         .testimonials-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
-            display: flex;
-            flex-direction: column;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
         
         .testimonials-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            padding-top: 2rem;
         }
         
         .testimonials-header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #FF69B4;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .testimonials-header p {
+            font-size: 1.3rem;
+            color: #e0e0e0;
         }
         
         .testimonials-section {
             background: rgba(13, 13, 15, 0.8);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
             border: 1px solid rgba(255, 105, 180, 0.3);
-            width: 100%;
-            display: block;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
         .testimonials-section h2 {
             color: #FF69B4;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
-        }
-        
-        .video-testimonials-grid {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
+            font-weight: 700;
         }
         
         .video-testimonial-item {
-            flex: 1;
-            background: rgba(13, 13, 15, 0.6);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 105, 180, 0.2);
-            max-height: 350px;
-            display: flex;
-            flex-direction: column;
+            background: linear-gradient(135deg, rgba(13, 13, 15, 0.95), rgba(26, 26, 29, 0.9));
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .video-testimonial-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 105, 180, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 105, 180, 0.3);
         }
         
         .video-testimonial-item h3 {
-            color: #8A8AFF;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            color: #FF69B4;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
         }
         
-        .video-testimonial-item video {
+        .video-testimonial-item iframe {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
+            height: 450px;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(255, 105, 180, 0.3);
         }
         
         .video-testimonial-item p {
             color: #e0e0e0;
-            font-size: 0.9rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: center;
             margin: 0;
-            overflow: hidden;
         }
         
         .written-testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 2rem;
             margin-bottom: 2rem;
         }
         
-        .superprof-highlight {
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.15), rgba(138, 138, 255, 0.15));
-            border: 2px solid rgba(255, 105, 180, 0.4);
+        .photo-testimonial {
+            background: linear-gradient(145deg, rgba(16, 16, 20, 0.9), rgba(24, 24, 30, 0.8));
             border-radius: 16px;
             padding: 2rem;
+            border: 1px solid rgba(255, 105, 180, 0.2);
+            transition: all 0.3s ease;
             text-align: center;
-            margin: 2rem 0;
+        }
+        
+        .photo-testimonial:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 105, 180, 0.5);
+            box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+        }
+        
+        .superprof-highlight {
+            background: linear-gradient(145deg, rgba(16, 16, 20, 0.95), rgba(24, 24, 30, 0.9));
+            border: 2px solid rgba(255, 105, 180, 0.4);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
         .superprof-highlight h2 {
@@ -130,8 +161,8 @@
         .superprof-stats {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
+            gap: 4rem;
+            margin: 2rem 0;
         }
         
         .superprof-stat {
@@ -139,50 +170,75 @@
         }
         
         .superprof-number {
-            font-size: 3rem;
-            font-weight: 700;
+            font-size: 4rem;
+            font-weight: 900;
             color: #8A8AFF;
         }
         
         .superprof-label {
             color: #e0e0e0;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         
         .superprof-btn {
             background: linear-gradient(135deg, #FF69B4, #8A8AFF);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 12px;
+            padding: 1.2rem 3rem;
+            border-radius: 15px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
             transition: transform 0.3s ease;
             margin-top: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .superprof-btn:hover {
             transform: translateY(-2px);
         }
         
-                    @media (max-width: 768px) {
-                .video-testimonials-grid {
-                    flex-direction: column;
-                    gap: 2rem;
-                }
-                
-                .video-testimonial-item {
-                    width: 100%;
-                }
-                
-                .written-testimonials-grid {
-                    grid-template-columns: 1fr;
-                }
-                
-                .superprof-stats {
-                    flex-direction: column;
-                    gap: 1rem;
-                }
+        @media (max-width: 1200px) {
+            .video-testimonial-item iframe {
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials-page {
+                padding: 5rem 0 2rem 0;
+            }
+            
+            .testimonials-header h1 {
+                font-size: 2rem;
+            }
+            
+            .testimonials-header p {
+                font-size: 1.1rem;
+            }
+            
+            .video-testimonial-item {
+                padding: 1.5rem;
+            }
+            
+            .video-testimonial-item iframe {
+                height: 300px;
+            }
+            
+            .written-testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .superprof-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .testimonials-section {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -212,33 +268,33 @@
         <div class="testimonials-container">
             <div class="testimonials-header">
                 <h1>TÉMOIGNAGES DE NOS ÉLÈVES</h1>
-                <p style="color: #e0e0e0; font-size: 1.2rem;">Découvrez les retours authentiques de nos élèves et leurs parents</p>
+                <p>Découvrez les retours authentiques de nos élèves et leurs parents</p>
             </div>
 
-            <!-- Vidéos -->
-            <div class="video-testimonials-grid" style="margin-bottom: 3rem;">
+            <!-- Section Vidéos -->
+            <div class="videos-grid">
                 <div class="video-testimonial-item">
                     <h3>Maelie - Préparation SAT</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005198" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width: 100%; height: 500px; min-height: 400px;" loading="eager"></iframe>
-                    <p style="color: #e0e0e0;">Témoignage de Maelie sur sa préparation au SAT et ses résultats.</p>
+                    <iframe src="https://player.vimeo.com/video/1140005198?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <p>Témoignage de Maelie sur sa préparation au SAT et ses résultats exceptionnels.</p>
                 </div>
 
                 <div class="video-testimonial-item">
                     <h3>Austin - Témoignage</h3>
-                    <iframe src="https://player.vimeo.com/video/1140025384" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width: 100%; height: 500px; min-height: 400px;" loading="eager"></iframe>
-                    <p style="color: #e0e0e0;">Austin partage son expérience avec Greg's Academy.</p>
+                    <iframe src="https://player.vimeo.com/video/1140025384?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <p>Austin partage son expérience et ses progrès avec Greg's Academy.</p>
                 </div>
 
                 <div class="video-testimonial-item">
                     <h3>Timothey - Admis aux Lazaristes et à l'EPFL</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005515" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width: 100%; height: 500px; min-height: 400px;" loading="eager"></iframe>
-                    <p style="color: #e0e0e0;">Timothey partage son expérience et son admission aux Lazaristes et à l'EPFL (2025).</p>
+                    <iframe src="https://player.vimeo.com/video/1140005515?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <p>Timothey partage son parcours et son admission aux Lazaristes et à l'EPFL (2025).</p>
                 </div>
 
                 <div class="video-testimonial-item">
-                    <h3>Démonstration des compétences acquises par Eiklil après notre bootcamp.</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005936" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width: 100%; height: 500px; min-height: 400px;" loading="eager"></iframe>
-                    <p style="color: #e0e0e0;">Démonstration des compétences acquises par Eiklil après notre bootcamp.</p>
+                    <h3>Eiklil - Compétences en Programmation</h3>
+                    <iframe src="https://player.vimeo.com/video/1140005936?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <p>Démonstration des compétences acquises par Eiklil après notre bootcamp.</p>
                 </div>
             </div>
 
