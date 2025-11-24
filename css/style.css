@@ -135,9 +135,9 @@ section[id] {
     padding: 0.4rem 0.6rem;
     border-radius: 8px;
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.7);
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -150,9 +150,10 @@ section[id] {
 }
 
 .lang-option:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 105, 180, 0.3);
-    transform: scale(1.1);
+    background: rgba(255, 105, 180, 0.2);
+    border-color: rgba(255, 105, 180, 0.5);
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
 }
 
 .lang-option.active {
