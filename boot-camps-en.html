@@ -617,7 +617,7 @@
             function bootcampShowSlide(targetIndex) {
                 console.log('👆 Changement vers slide:', targetIndex, 'depuis:', bootcampCurrentSlide);
                 
-                // Retirer la classe active de l'élément actuel
+                // Retirer la class active de l'élément actuel
                 bootcampSlides[bootcampCurrentSlide].classList.remove('active');
                 bootcampIndicators[bootcampCurrentSlide].classList.remove('active');
                 
@@ -630,7 +630,7 @@
                     bootcampCurrentSlide = 0;
                 }
                 
-                // Ajouter la classe active au nouvel élément
+                // Ajouter la class active au nouvel élément
                 bootcampSlides[bootcampCurrentSlide].classList.add('active');
                 bootcampIndicators[bootcampCurrentSlide].classList.add('active');
                 
@@ -652,7 +652,7 @@
             window.bootcampChangeSlide = bootcampChangeSlide;
             window.bootcampGoToSlide = bootcampGoToSlide;
 
-            // Auto-slide toutes les 2 secondes
+            // Auto-slide toutes les 2 10th grades
             function startAutoSlide() {
                 autoSlideInterval = setInterval(() => {
                     console.log('⏰ Auto-slide depuis:', bootcampCurrentSlide);
