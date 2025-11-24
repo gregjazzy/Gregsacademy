@@ -582,21 +582,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Gestion du formulaire de contact (Netlify Forms)
+// Gestion du formulaire de contact (EmailJS)
 const initContactForm = function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Laisser Netlify gérer la soumission
-            // Afficher un message de chargement
+            e.preventDefault();
+            
             const submitButton = this.querySelector('button[type="submit"]');
             if (submitButton) {
                 const originalText = submitButton.textContent;
                 submitButton.disabled = true;
                 submitButton.textContent = 'Envoi en cours...';
+                
+                // Envoyer l'email via EmailJS
+                emailjs.sendForm('service_sq8z9cw', 'template_y31d8sd', this)
+                    .then(function(response) {
+                        console.log('✅ Email envoyé avec succès!', response.status, response.text);
+                        submitButton.textContent = '✅ Message envoyé !';
+                        submitButton.style.backgroundColor = '#28a745';
+                        
+                        // Réinitialiser le formulaire
+                        contactForm.reset();
+                        
+                        // Réinitialiser le bouton après 3 secondes
+                        setTimeout(() => {
+                            submitButton.textContent = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = '';
+                        }, 3000);
+                    }, function(error) {
+                        console.error('❌ Erreur lors de l\'envoi:', error);
+                        submitButton.textContent = '❌ Erreur, réessayez';
+                        submitButton.style.backgroundColor = '#dc3545';
+                        
+                        // Réinitialiser le bouton après 3 secondes
+                        setTimeout(() => {
+                            submitButton.textContent = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = '';
+                        }, 3000);
+                    });
             }
-            // Note: Netlify redirigera automatiquement vers une page de succès
         });
     }
 };
