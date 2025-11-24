@@ -583,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Gestion du formulaire de contact (Netlify Forms)
-document.addEventListener('DOMContentLoaded', function() {
+const initContactForm = function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
@@ -591,16 +591,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // Laisser Netlify gérer la soumission
             // Afficher un message de chargement
             const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            submitButton.disabled = true;
-            submitButton.textContent = 'Envoi en cours...';
-            
+            if (submitButton) {
+                const originalText = submitButton.textContent;
+                submitButton.disabled = true;
+                submitButton.textContent = 'Envoi en cours...';
+            }
             // Note: Netlify redirigera automatiquement vers une page de succès
-            // ou vous pouvez ajouter un attribut action="/thank-you" au formulaire
         });
     }
-});
+};
+
+// Appeler l'initialisation du formulaire après le chargement du DOM
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initContactForm);
+} else {
+    initContactForm();
+}
 
 // Gestion des FAQ accordéons
 document.addEventListener('DOMContentLoaded', function() {
