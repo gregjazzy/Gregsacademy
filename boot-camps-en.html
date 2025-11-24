@@ -410,7 +410,7 @@
                 </div>
             </div>
 
-            <!-- Caractéristiques Premium -->
+            <!-- Features Premium -->
             <div class="premium-features">
                 <div class="feature-card">
                     <div class="feature-icon">🧮</div>
@@ -469,7 +469,7 @@
             <!-- Planning Type -->
             <div class="schedule-section">
                 <div class="container">
-                    <h2 class="section-title-macro text-center" style="margin-bottom: 3rem;">PLANNING TYPE <span class="highlight-word">D'UNE JOURNÉE</span></h2>
+                    <h2 class="section-title-macro text-center" style="margin-bottom: 3rem;">PLANNING TYPE <span class="highlight-word">OF A DAY</span></h2>
                     
                     <div class="schedule-grid">
                         <div class="schedule-item">
@@ -490,7 +490,7 @@
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">12:30 - 14:00</div>
-                            <div class="activity">Lunch Déjeuner & Repos Rest</div>
+                            <div class="activity">Lunch Lunch Déjeuner & Repos Rest Rest</div>
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">14:00 - 16:00</div>
@@ -498,19 +498,19 @@
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">16:00 - 16:30</div>
-                            <div class="activity">Goûter Énergétique</div>
+                            <div class="activity">Energy Snack</div>
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">16:30 - 18:30</div>
-                            <div class="activity">Développement d'Apps</div>
+                            <div class="activity">App Development</div>
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">19:00 - 20:00</div>
-                            <div class="activity">Dîner</div>
+                            <div class="activity">Dinner</div>
                         </div>
                         <div class="schedule-item">
                             <div class="time-slot">20:00 - 21:00</div>
-                            <div class="activity">Activités Détente</div>
+                            <div class="activity">Relaxation Activities</div>
                         </div>
                     </div>
                 </div>
@@ -518,9 +518,9 @@
 
             <!-- Call to Action Premium -->
             <div class="premium-cta">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">REJOIGNEZ L'ÉLITE</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">JOIN THE ELITE</h2>
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                    Une experience transformatrice qui allie excellence académique, sport et innovation entrepreneuriale
+                    Une experience transformatrice qui allie excellence academic, sport et innovation entrepreneuriale
                 </p>
                 
                 <div style="margin-bottom: 2rem;">
@@ -543,7 +543,7 @@
                         Suivi individuel quotidien
                     </div>
                     <div class="cta-feature">
-                        <strong>✓ Matériel inclus</strong><br>
+                        <strong>✓ Material included</strong><br>
                         Premium Equipment fournis
                     </div>
                     <div class="cta-feature">
@@ -557,7 +557,7 @@
                 </a>
                 
                 <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">
-                    Places limitées - Program sur sélection
+                    Places limitées - Program sur selection
                 </p>
             </div>
         </section>
@@ -589,13 +589,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Greg's Academy. Tous droits réservés.</p>
+                <p>&copy; 2024 Greg's Academy. Tous droits reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Attendre que le DOM soit complètement chargé
+        // Attendre que le DOM soit completely loaded
         document.addEventListener('DOMContentLoaded', function() {
             console.log('🎠 Initialisation du carrousel Boot Camp...');
             
@@ -604,24 +604,24 @@
             const bootcampIndicators = document.querySelectorAll('.carousel-indicators .indicator');
             let autoSlideInterval;
 
-            console.log('📊 Éléments trouvés:', {
+            console.log('📊 Elements found:', {
                 slides: bootcampSlides.length,
                 indicators: bootcampIndicators.length
             });
 
             if (bootcampSlides.length === 0) {
-                console.error('❌ Aucun slide trouvé !');
+                console.error('❌ No slide found !');
                 return;
             }
 
             function bootcampShowSlide(targetIndex) {
                 console.log('👆 Changement vers slide:', targetIndex, 'depuis:', bootcampCurrentSlide);
                 
-                // Retirer la class active de l'élément actuel
+                // Remove la class active de l'element actuel
                 bootcampSlides[bootcampCurrentSlide].classList.remove('active');
                 bootcampIndicators[bootcampCurrentSlide].classList.remove('active');
                 
-                // Calculer le nouvel index (gérer les cas négatifs et dmealssements)
+                // Calculate le nouvel index (handle les cas negative et overflows)
                 bootcampCurrentSlide = targetIndex;
                 if (bootcampCurrentSlide < 0) {
                     bootcampCurrentSlide = bootcampSlides.length - 1;
@@ -630,11 +630,11 @@
                     bootcampCurrentSlide = 0;
                 }
                 
-                // Ajouter la class active au nouvel élément
+                // Add la class active au nouvel element
                 bootcampSlides[bootcampCurrentSlide].classList.add('active');
                 bootcampIndicators[bootcampCurrentSlide].classList.add('active');
                 
-                console.log('✅ Slide activé:', bootcampCurrentSlide);
+                console.log('✅ Slide activated:', bootcampCurrentSlide);
             }
 
             function bootcampChangeSlide(direction) {
@@ -660,14 +660,14 @@
                 }, 2000);
             }
 
-            // Démarrer l'auto-slide
+            // Start l'auto-slide
             startAutoSlide();
 
-            // Arrêter l'auto-slide au survol
+            // Stop l'auto-slide au survol
             const carouselContainer = document.querySelector('.carousel-container');
             if (carouselContainer) {
                 carouselContainer.addEventListener('mouseenter', () => {
-                    console.log('⏸️ Auto-slide arrêté');
+                    console.log('⏸️ Auto-slide stopped');
                     clearInterval(autoSlideInterval);
                 });
                 
@@ -677,7 +677,7 @@
                 });
             }
 
-            console.log('✅ Carrousel Boot Camp initialisé avec succès !');
+            console.log('✅ Carrousel Boot Camp initialized avec success !');
         });
     </script>
     <script src="js/main.js"></script>
