@@ -1,8 +1,7 @@
 # Configuration Netlify
 [build]
-  publish = "."
-
-# Pas de redirects catch-all pour que les fichiers HTML soient accessibles directement
+  command = "" # Pas de build nécessaire
+  publish = "." # Publier directement la racine
 
 # Headers de sécurité
 [[headers]]
