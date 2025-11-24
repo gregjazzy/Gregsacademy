@@ -1,0 +1,13 @@
+# Configuration Netlify
+[build]
+  publish = "."
+
+# Pas de redirects catch-all pour que les fichiers HTML soient accessibles directement
+
+# Headers de sécurité
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
