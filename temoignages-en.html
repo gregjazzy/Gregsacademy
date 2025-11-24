@@ -45,6 +45,57 @@
             margin-top: 3rem;
         }
         
+        .video-testimonial-item {
+            background: linear-gradient(135deg, rgba(13, 13, 15, 0.95), rgba(26, 26, 29, 0.9));
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .video-testimonial-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 105, 180, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 105, 180, 0.3);
+        }
+        
+        /* Container pour la vidéo avec overlay */
+        .video-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            border: none;
+            display: block;
+        }
+        
+        /* Overlay pour cacher les contrôles */
+        .video-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .video-container:hover::after {
+            opacity: 1;
+        }
+        
         .testimonials-header {
             text-align: center;
             margin-bottom: 4rem;
@@ -275,25 +326,33 @@
             <div class="videos-grid">
                 <div class="video-testimonial-item">
                     <h3>Maelie - SAT Preparation</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005198?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/1140005198?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                     <p>Maelie's testimonial about her SAT preparation and exceptional results.</p>
                 </div>
 
                 <div class="video-testimonial-item">
                     <h3>Austin - Testimonial</h3>
-                    <iframe src="https://player.vimeo.com/video/1140025384?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/1140025384?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                     <p>Austin shares his experience and progress with Greg's Academy.</p>
                 </div>
 
                 <div class="video-testimonial-item">
                     <h3>Timothey - Admitted to Lazaristes and EPFL</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005515?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/1140005515?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                     <p>Timothey shares his journey and admission to Lazaristes and EPFL (2025).</p>
                 </div>
 
                 <div class="video-testimonial-item">
                     <h3>Eiklil - Programming Skills</h3>
-                    <iframe src="https://player.vimeo.com/video/1140005936?controls=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/1140005936?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                     <p>Demonstration of skills acquired by Eiklil after our bootcamp.</p>
                 </div>
             </div>
