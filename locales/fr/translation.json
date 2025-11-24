@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "À propos",
+    "services": "Services",
+    "results": "Résultats",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professeur Particulier de Mathématiques, Physique & Programmation",
+    "subtitle": "Des cours personnalisés de <span class=\"highlight\">mathématiques</span> et <span class=\"highlight\">physique</span> pour familles exigeantes, alliant excellence et bienveillance pour briller et atteindre ses objectifs.",
+    "cta": "Réserver un cours",
+    "carousel": {
+      "maelie": "Témoignage de Maelie - Score SAT exceptionnel",
+      "stats": "de mes élèves intègrent une école ou université du top 30 mondial",
+      "discover": "Découvrez les résultats de mes élèves",
+      "superprof_reviews": "avis certifiés sur Superprof",
+      "superprof_cta": "Voir tous les avis"
+    }
+  },
+  "services": {
+    "title": "Services Premium",
+    "private_lessons": {
+      "title": "Cours Particuliers",
+      "description": "Mathématiques, physique et programmation du CE2 au Bac+5"
+    },
+    "bootcamp": {
+      "title": "Boot Camp Premium",
+      "description": "11 jours d'excellence : Maths, sport et entrepreneurship"
+    },
+    "sat": {
+      "title": "Préparation SAT",
+      "description": "Programme intensif pour scores exceptionnels"
+    },
+    "intensive": {
+      "title": "Stages Intensifs",
+      "description": "Révisions ciblées pendant les vacances scolaires"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages de Nos Élèves",
+    "subtitle": "Découvrez les retours authentiques de nos élèves et leurs parents",
+    "maelie": "Témoignage de Maelie sur sa préparation au SAT et ses résultats.",
+    "austin": "Austin partage son expérience avec Greg's Academy.",
+    "timothey": "Timothey partage son expérience et son admission aux Lazaristes et à l'EPFL (2025).",
+    "eiklil": "Démonstration des compétences acquises par Eiklil après notre bootcamp."
+  },
+  "footer": {
+    "copyright": "© 2024 Greg's Academy. Tous droits réservés."
+  }
+}
+

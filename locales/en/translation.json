@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "results": "Results",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Private Tutor for Mathematics, Physics & Programming",
+    "subtitle": "Personalized <span class=\"highlight\">mathematics</span> and <span class=\"highlight\">physics</span> lessons for demanding families, combining excellence and kindness to shine and achieve your goals.",
+    "cta": "Book a lesson",
+    "carousel": {
+      "maelie": "Maelie's testimonial - Exceptional SAT score",
+      "stats": "of my students get into a top 30 school or university worldwide",
+      "discover": "Discover my students' results",
+      "superprof_reviews": "certified reviews on Superprof",
+      "superprof_cta": "See all reviews"
+    }
+  },
+  "services": {
+    "title": "Premium Services",
+    "private_lessons": {
+      "title": "Private Lessons",
+      "description": "Mathematics, physics and programming from elementary to graduate level"
+    },
+    "bootcamp": {
+      "title": "Premium Boot Camp",
+      "description": "11 days of excellence: Math, sports and entrepreneurship"
+    },
+    "sat": {
+      "title": "SAT Preparation",
+      "description": "Intensive program for exceptional scores"
+    },
+    "intensive": {
+      "title": "Intensive Courses",
+      "description": "Targeted revision during school holidays"
+    }
+  },
+  "testimonials": {
+    "title": "Our Students' Testimonials",
+    "subtitle": "Discover authentic feedback from our students and their parents",
+    "maelie": "Maelie's testimonial about her SAT preparation and results.",
+    "austin": "Austin shares his experience with Greg's Academy.",
+    "timothey": "Timothey shares his experience and admission to Lazaristes and EPFL (2025).",
+    "eiklil": "Demonstration of skills acquired by Eiklil after our bootcamp."
+  },
+  "footer": {
+    "copyright": "© 2024 Greg's Academy. All rights reserved."
+  }
+}
+

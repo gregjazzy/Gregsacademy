@@ -123,6 +123,39 @@ section[id] {
     width: 100%;
 }
 
+/* Language Selector */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.lang-option {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.lang-option:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 105, 180, 0.3);
+}
+
+.lang-option.active {
+    color: #FF69B4;
+    background: rgba(255, 105, 180, 0.1);
+    border-color: rgba(255, 105, 180, 0.4);
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
