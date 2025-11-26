@@ -71,3 +71,4 @@ i18next.on('languageChanged', function(lng) {
 // Export for use in other modules
 export { i18next, updateContent, changeLanguage };
 
+
